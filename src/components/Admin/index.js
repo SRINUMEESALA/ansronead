@@ -15,7 +15,7 @@ const apiStatusConstants = {
     load: "Loading",
     initial: "initial"
 }
-const url = "http://localhost:4000/products"
+
 const Admin = () => {
 
     const [selectedItem, setSelectedItem] = useState("")
@@ -32,7 +32,8 @@ const Admin = () => {
 
 
     const updateProduct = async () => {
-        const url = "http://localhost:4000/product/update"
+        // const url = "http://localhost:4000/product/update"
+        const url = "https://ansronebe.onrender.com/update"
         const options = {
             method: "POST",
             body: JSON.stringify({
@@ -76,6 +77,8 @@ const Admin = () => {
 
     const getProducts = async () => {
         setGetProductsAPIstatus(apiStatusConstants.load)
+        // const url = "http://localhost:4000/products"
+        const url = "https://ansronebe.onrender.com/products"
         const options = {
             method: "GET",
             headers: {
